@@ -12,10 +12,11 @@ object Data {
   )
 
   val cities = Seq(
-    CityInfo("Kaohsiung", "-200.0"),
-//    CityInfo("Tainan", "-100.0"),
-    CityInfo("Taichung", "0.0"),
-//    CityInfo("Hsinchu", "100.0"),
-    CityInfo("Taipei", "200.0")
+    CityInfo("A", "0"),
+//    CityInfo("B", "100"),
+    CityInfo("C", "200"),
+//    CityInfo("D", "300"),
+//    CityInfo("E", "400"),
+    CityInfo("F", "500")
   )
 }
