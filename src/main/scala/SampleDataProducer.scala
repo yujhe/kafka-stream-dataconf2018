@@ -17,11 +17,10 @@ You can use kafka-console-consumer to consume produced messages:
 
 You can use kafka-console-producer to manually produce message:
   docker-compose exec kafka kafka-console-producer.sh \
-    --bootstrap-server kafka:9092 \
+    --broker-list kafka:9092 \
     --topic user_info \
     --property "parse.key=true" \
-    --property "key.separator=:" \
-    --from-beginning
+    --property "key.separator=:"
 */
 object SampleDataProducer {
   def main(args: Array[String]): Unit = {
