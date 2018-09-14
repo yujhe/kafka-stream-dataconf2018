@@ -3,6 +3,9 @@ Tutorial for DataConf.TW 2018
 
 ## Pre-Requisites
 * Install docker-compose https://docs.docker.com/compose/install/
+* java 1.8
+* sbt 0.13.7
+* scala 2.12.6
 
 ## Environment Setup
 * Start Zookeeper and Kafka docker container
