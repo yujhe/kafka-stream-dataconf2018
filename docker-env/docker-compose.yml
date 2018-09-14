@@ -21,4 +21,4 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "city_info:1:1,user_location:2:1,user_info:1:1"
+      KAFKA_CREATE_TOPICS: "location_info:1:1,user_location:2:1,user_info:1:1"

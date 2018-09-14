@@ -2,7 +2,7 @@ case class UserInfo(id: String, name: String)
 
 case class UserLocation(id: String, x: String)
 
-case class CityInfo(name: String, x: String)
+case class LocationInfo(name: String, x: String)
 
 object Data {
   val users = Seq(
@@ -11,12 +11,12 @@ object Data {
     UserInfo("3", "Charlie")
   )
 
-  val cities = Seq(
-    CityInfo("A", "0"),
-//    CityInfo("B", "100"),
-    CityInfo("C", "200"),
-//    CityInfo("D", "300"),
-//    CityInfo("E", "400"),
-    CityInfo("F", "500")
+  val locations = Seq(
+    LocationInfo("A", "0"),
+//    LocationInfo("B", "100"),
+    LocationInfo("C", "200"),
+//    LocationInfo("D", "300"),
+//    LocationInfo("E", "400"),
+    LocationInfo("F", "500")
   )
 }

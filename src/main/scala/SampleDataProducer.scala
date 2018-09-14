@@ -38,19 +38,17 @@ object SampleDataProducer {
     }
     println
 
-    // produce city data into city_info topic
-    Data.cities.foreach { c =>
+    // produce location data into location_info topic
+    Data.locations.foreach { c =>
       val msg = new KeyValue(c.name, c.x)
-      producer.send(new ProducerRecord[String, String]("city_info", msg.key, msg.value))
-      println(s"send $msg to city_info topic")
+      producer.send(new ProducerRecord[String, String]("location_info", msg.key, msg.value))
+      println(s"send $msg to location_info topic")
     }
     println
 
     // produce user location into user_location topic
     // users endless move around between A an F in different speed
     // it's an endless loop...
-//    val usersLocation = Data.users.map(u => UserLocation(u.id, "0"))
-//    val usersSpeed = Data.users.map(u => (u.id, randomSpeed())).toMap
     val (usersLocation, usersSpeed) = Data.users.map { u =>
       val initLocation = "0"
       val initSpeed = randomSpeed()
