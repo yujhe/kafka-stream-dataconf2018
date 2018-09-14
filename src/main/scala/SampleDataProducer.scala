@@ -38,14 +38,6 @@ object SampleDataProducer {
     }
     println
 
-    // produce location data into location_info topic
-    Data.locations.foreach { c =>
-      val msg = new KeyValue(c.name, c.x)
-      producer.send(new ProducerRecord[String, String]("location_info", msg.key, msg.value))
-      println(s"send $msg to location_info topic")
-    }
-    println
-
     // produce user location into user_location topic
     // users endless move around between A an F in different speed
     // it's an endless loop...
